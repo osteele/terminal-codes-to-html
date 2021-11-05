@@ -1,7 +1,8 @@
 # terminal-codes-to-html
 
 Convert text that contains [ANSI/VT100 color terminal
-codes](https://wiki.bash-hackers.org/scripting/terminalcodes) to HTML.
+codes](https://wiki.bash-hackers.org/scripting/terminalcodes) to HTML or plain
+text.
 
 ## History and Status
 
