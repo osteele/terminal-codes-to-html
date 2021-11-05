@@ -1,0 +1,59 @@
+{
+  "name": "terminal-codes-to-html",
+  "description": "Convert strings that include terminal color codes to HTML.",
+  "license": "MIT",
+  "version": "0.0.1",
+  "author": {
+    "name": "Oliver Steele",
+    "email": "steele@osteele.com",
+    "url": "https://code.osteele.com"
+  },
+  "keywords": [
+    "terminal codes",
+    "color",
+    "html"
+  ],
+  "engines": {
+    "node": ">=14.17"
+  },
+  "bugs": "https://github.com/osteele/terminal-codes-to-html/issues",
+  "repository": "osteele/terminal-codes-to-html",
+  "homepage": "https://github.com/osteele/terminal-codes-to-html#readme",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "esbuild --outfile=dist/index.js --platform=node --format=cjs --minify --sourcemap ./src/* && tsc --emitDeclarationOnly --declaration",
+    "lint": "eslint src --ext ts",
+    "prepack": "yarn build",
+    "prepare": "husky install",
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "14.x",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "esbuild": "^0.13.12",
+    "esbuild-jest": "^0.5.0",
+    "eslint": "^8.1.0",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "prettier-eslint-cli": "^5.0.1",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.ts"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "esbuild-jest"
+    }
+  }
+}
